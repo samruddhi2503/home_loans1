@@ -1,0 +1,19 @@
+.header {
+  background: linear-gradient(90deg, #4b0082, #6b21a8);
+  color: white;
+  padding: 1rem 2rem;
+}
+
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}

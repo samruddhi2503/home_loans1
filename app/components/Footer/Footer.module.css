@@ -1,0 +1,215 @@
+.footer {
+  background-color: #1f2937; /* dark gray */
+  color: white;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  font-size: 0.875rem;
+}
+
+.footerContentWrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1200px; /* max width container */
+  margin: 0 auto;
+}
+
+.leftSection {
+  flex: 2;  /* takes more space */
+  padding-right: 2rem;
+  border-right: 2px solid #6b7280; /* vertical grey line */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rightSection {
+  flex: 1;  /* takes remaining */
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+/* Left and right sections take equal space */
+.leftSection,
+.rightSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+/* Rest of your styles remain as is */
+
+.about {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: #6b21a8;
+}
+
+
+.applyNow {
+  background-color: #6b21a8;
+  color: white;
+}
+
+
+.login:hover {
+  background-color: white;
+  color: #6b21a8;
+  border: 1px solid #6b21a8;
+}
+
+.newsletter {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.newsletter h3 {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.emailInputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space between input and button */
+}
+
+.newsletter input {
+  flex: 1; /* input takes available space */
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  min-width: 0; /* prevents shrinking issues */
+}
+
+.submitButton {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: #6b21a8;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.horizontalLine {
+  width: 195%;
+  height: 2px;
+  background-color: #616973; /* Tailwind's gray-600 */
+  margin: 0.5rem 0 1rem 0;
+  border: none;
+}
+
+
+.legal {
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.legal a {
+  color: #9ca3af;
+  text-decoration: underline;
+  margin: 0 0.25rem;
+}
+
+.subHeading {
+  color: #edeef1;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.linkColumns {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.leftLinks,
+.rightLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.leftLinks li,
+.rightLinks li {
+  margin-bottom: 0.75rem;
+}
+
+.leftLinks li a,
+.rightLinks li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.leftLinks li a:hover,
+.rightLinks li a:hover {
+  color: #6b21a8;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.actionLink {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+ 
+  transition: background-color 0.3s ease;
+}
+
+.actionLink:hover {
+  background-color: #6f6d70;
+}
+
+.separator {
+  color: white;
+  font-weight: 700;
+  user-select: none;
+  padding: 0 0.25rem;
+}
+.successMessage {
+  color: green;
+  margin-top: 0.5rem;
+}
