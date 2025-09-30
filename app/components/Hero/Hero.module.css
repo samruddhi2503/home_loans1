@@ -1,0 +1,41 @@
+.hero {
+  background: linear-gradient(135deg, #6b21a8 0%, #4b0082 100%);
+  color: white;
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heroSection {
+  padding-bottom: 120px; /* room for overlapping calculator */
+}
+
+.text {
+  max-width: 50%;
+}
+
+.smallTxt {
+  letter-spacing: 0.2em;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.imageWrapper {
+  max-width: 40%;
+}
+
+.image {
+  width: 100%;
+}
