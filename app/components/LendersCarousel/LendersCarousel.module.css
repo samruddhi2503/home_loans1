@@ -1,0 +1,67 @@
+/* components/LendersCarousel/LendersCarousel.module.css */
+.container {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 1.5rem;
+}
+
+.logosRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.logoWithArrow {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.arrowLeft, .arrowRight {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  user-select: none;
+}
+
+.arrowLeft {
+  margin-right: 0.5rem;
+}
+
+.arrowRight {
+  margin-left: 0.5rem;
+}
+
+.logoWrapper {
+  width: 120px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 0.5rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.logoWrapper:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  max-width: 100%;
+  max-height: 130%;
+  object-fit: contain;
+}
