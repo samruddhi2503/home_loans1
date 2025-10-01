@@ -9,11 +9,11 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: 0.9rem;
+   font-size: 1.7rem;
   font-weight: 300;
 }
 
-.logo {
-  height: 40px;
-  width: auto;
+.badge {
+  height: 120px;
+  width: 107px;
 }

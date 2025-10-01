@@ -1,33 +1,31 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
 import styles from './LendersCarousel.module.css';
 
 const lenders = [
-  { name: 'BPI', logo: '/bpi.svg' },
-  { name: 'BDO', logo: '/logos/bdo.svg' },
-  { name: 'Chinabank', logo: '/chinabank.png' },
-  { name: 'Security Bank', logo: '/securitybank.png' },
+  { name: 'BPI', logo: '/bpi.png', width: 100, height: 50 },
+  { name: 'BDO', logo: '/bdo.png', width: 100, height: 50 },
+  { name: 'Chinabank', logo: '/chinabank.png', width: 100, height: 50 },
+  { name: 'Security Bank', logo: '/securitybank.png', width: 400, height: 400 },
 ];
 
 export default function LendersCarousel() {
   const [startIndex, setStartIndex] = useState(0);
-  const showCount = 4;  // Show all logos
 
   const prev = () => {
-    setStartIndex(prev => (prev <= 0 ? lenders.length - 1 : prev - 1));
+    setStartIndex((prev) => (prev <= 0 ? lenders.length - 1 : prev - 1));
   };
 
   const next = () => {
-    setStartIndex(prev => (prev >= lenders.length - 1 ? 0 : prev + 1));
+    setStartIndex((prev) => (prev >= lenders.length - 1 ? 0 : prev + 1));
   };
-
-  // For simplicity, showing all logos here without slicing
 
   return (
     <section className={styles.container}>
       <h2 className={styles.heading}>Our Range Of Partnered Lenders</h2>
       <div className={styles.logosRow}>
-        {lenders.map(({ name, logo }, i) => (
+        {lenders.map(({ name, logo, width, height }) => (
           <div key={name} className={styles.logoWithArrow}>
             {name === 'BPI' && (
               <button onClick={prev} className={styles.arrowLeft}>
@@ -35,7 +33,13 @@ export default function LendersCarousel() {
               </button>
             )}
             <div className={styles.logoWrapper}>
-              <img src={logo} alt={`${name} logo`} className={styles.logo} />
+              <Image
+                src={logo}
+                alt={`${name} logo`}
+                width={width}
+                height={height}
+                className={styles.logo}
+              />
             </div>
             {name === 'Security Bank' && (
               <button onClick={next} className={styles.arrowRight}>

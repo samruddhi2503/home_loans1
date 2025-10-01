@@ -7,7 +7,7 @@ export default function Header() {
       <div className={styles.stats}>
         <div><strong><b>7,000,000</b></strong><br />In potential savings</div>
         <span className={styles.separator}>|</span>
-        <div><img src="/logo.png" alt="Platform Logo" className={styles.logo} /></div>
+        <div><img src="/badge.png" alt="Platform Logo" className={styles.badge} /></div>
         <span className={styles.separator}>|</span>
         <div>
           <strong><b>15 Minutes</b></strong><br />To apply online
