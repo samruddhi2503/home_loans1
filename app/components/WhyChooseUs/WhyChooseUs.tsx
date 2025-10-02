@@ -36,31 +36,31 @@ const rightCards: Card[] = [
   {
     title: 'Keep # of Results + Updated Regularly + Share',
     desc: 'Get fast responses and help anytime with our AI-powered loan expert.',
-    imgSrc: '/ai-loan-expert.png',
+    imgSrc: '/bot.png',
     imgAlt: 'AI Home Loan Expert Chat',
   },
   {
     title: 'Help',
     desc: 'Hey Dantes! How can I help you with your loan today ?',
-    imgSrc: '/loan-comparison-popup.png',
+    imgSrc: '/bot.png',
     imgAlt: 'Loan comparison popup',
   },
   {
     title: 'Bank Comparison Table',
     desc: 'View side-by-side bank options and pick the best loan fit for you.',
-    imgSrc: '/bank-comparison-table.png',
+    imgSrc: '/bdo.png',
     imgAlt: 'Bank comparison table',
   },
   {
     title: 'In-depth Home Loan Detail',
     desc: 'Detailed breakdown of interest rates, terms, and savings shown clearly.',
-    imgSrc: '/home-loan-detail.png',
+    imgSrc: '/bpi.png',
     imgAlt: 'Home loan details',
   },
   {
     title: 'Money Saving Decisions Made Easy',
     desc: 'You get all the details you need, fast. See the good and bad of each loan in one place.',
-    imgSrc: '/money-saving-decisions.png',
+    imgSrc: '/yes.jpg',
     imgAlt: 'Money saving decisions',
   },
 ];
@@ -86,8 +86,8 @@ export default function WhyChooseUs() {
                   <Image
                     src={imgSrc}
                     alt={imgAlt ?? ''}
-                    width={400} // Adjust image dimensions as needed
-                    height={220}
+                    width={70} // Adjust image dimensions as needed
+                    height={70}
                     className={styles.cardImage}
                     priority
                   />

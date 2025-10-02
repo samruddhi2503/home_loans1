@@ -1,0 +1,146 @@
+/* components/MenuHeader.module.css */
+.menuHeader {
+  width: 100%;
+  background: #6b50a1;
+  display: flex;
+  align-items: center;
+  padding: 0 36px;
+  height: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.logo {
+  width: 190px;
+  height: 35px;
+  margin-right: 16px;
+}
+
+.title {
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: bold;
+  color: white;
+}
+
+.yellow {
+  color: #fec932;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #e3dae3;
+}
+
+.navSection {
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  gap: 40px;
+}
+
+
+.navSection a {
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  padding: 2px 8px;
+}
+
+.navSection a:hover,
+.navSection a:focus {
+  text-decoration: underline; /* Optional: underline on hover/focus */
+  color: #fec932; /* Optional: highlight color on hover */
+}
+
+
+.active {
+  color: #ffffff;
+  font-weight: bold;
+  font-size:30;
+   text-decoration:none;
+}
+
+
+
+.active1 {
+  color: #ffffff;
+  font-weight: bold;
+  font-size:30;
+   text-decoration:none;
+}
+
+
+.active2 {
+  color: #ffffff;
+  font-weight: bold;
+  font-size:30;
+   text-decoration:none;
+}
+
+
+.active3 {
+  color: #ffffff;
+  font-weight: bold;
+  font-size:30;
+   text-decoration:none;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.notification {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.bellIcon {
+  width: 27px;
+  height: 28px;
+  background: url('/bellicon.png') no-repeat center center;
+  background-size: contain;
+}
+
+.divider {
+  border-left: 1px solid #f2f2f3;
+  height: 22px;
+  margin: 0 10px;
+   text-decoration:none;
+}
+
+.login {
+   text-decoration:none;
+   color: white;
+}
+.applyNow {
+  color: #fff;
+ 
+  background: none;
+  border: none;
+  cursor: pointer;
+  
+  text-decoration:none;
+}
+.imageWrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
