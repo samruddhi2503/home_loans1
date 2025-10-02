@@ -23,7 +23,7 @@ export default function Home() {
       </div>
       <WhyChooseUs />
       <LendersCarousel />
-      <Footer />
+      <Footer  />
     </>
   );
 }
