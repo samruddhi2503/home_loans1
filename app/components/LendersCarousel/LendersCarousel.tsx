@@ -6,8 +6,8 @@ import styles from './LendersCarousel.module.css';
 const lenders = [
   { name: 'BPI', logo: '/bpi.png', width: 100, height: 50 },
   { name: 'BDO', logo: '/bdo.png', width: 100, height: 50 },
-  { name: 'Chinabank', logo: '/chinabank.png', width: 100, height: 50 },
-  { name: 'Security Bank', logo: '/securitybank.png', width: 100, height: 50 },
+  { name: 'Chinabank', logo: '/chinabank.png', width: 650, height: 650 },
+  { name: 'Security Bank', logo: '/securitybank.png', width: 500, height: 500 },
 ];
 
 export default function LendersCarousel() {

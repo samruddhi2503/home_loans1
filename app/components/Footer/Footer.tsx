@@ -43,64 +43,45 @@ export default function Footer() {
       <div className={styles.footerContentWrapper}>
         <div className={styles.leftSection}>
           <div className={styles.about}>
+            <img src="/estra.png" alt="Estra Finance" className={styles.estra} />
             <img
-              src="/estra.png"
-              alt="Estra Finance"
-              className={styles.estra}
+              src="/estrafinance.png" // replace with your 2nd image path
+              alt="Second Logo"
+              className={styles.estrafinance}
             />
-            
-    <img
-      src="/estrafinance.png"  // replace with your 2nd image path
-      alt="Second Logo"
-      className={styles.estrafinance}
-    />
             <div className={styles.horizontalLine}></div>
-            <h4 className={styles.subHeading}>About Our App</h4>
+            <h4 className={styles.subHeading}>About Our App:</h4>
             <div className={styles.linkColumns}>
               <ul className={styles.leftLinks}>
-                <li>
-                  <a href="#">How To Save</a>
-                </li>
-                <li>
-                  <a href="#">How To Invest</a>
-                </li>
-                <li>
-                  <a href="#">Features</a>
-                </li>
-                <li>
-                  <a href="#">Navigation</a>
-                </li>
+                <li><a href="#">How To Save</a></li>
+                <li><a href="#">How To Invest</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Navigation</a></li>
               </ul>
               <ul className={styles.rightLinks}>
-                <li>
-                  <a href="#">Home</a>
-                </li>
-                <li>
-                  <a href="#">Loan Applications</a>
-                </li>
-                <li>
-                  <a href="#">AI Home Loan Expert</a>
-                </li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Loan Applications</a></li>
+                <li><a href="#">AI Home Loan Expert</a></li>
               </ul>
             </div>
             <div className={styles.actions}>
               <span className={styles.separator}>|</span>
-              <a href="#" onClick={handleApplyNowClick} className={styles.actionLink}>
-                Apply Now
-              </a>
+              <a href="#" onClick={handleApplyNowClick} className={styles.actionLink}>APPLY NOW</a>
               <span className={styles.separator}>|</span>
-              <a href="#" onClick={handleLoginClick} className={styles.actionLink}>
-                Login
-              </a>
+              <a href="#" onClick={handleLoginClick} className={styles.actionLink}>LOGIN</a>
               <span className={styles.separator}>|</span>
             </div>
-          </div>
-          <div className={styles.legal}>
-            © 2025 Estra Finance. All rights reserved.
-            <div>
-              <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a> |{' '}
-              <a href="#">Cookies</a>
-            </div>
+            {/* Bottom footer section moved here below Apply Now and Login */}
+      <div className={styles.bottomFooter}>
+  <span className={styles.copyrightText}>© 2025 Estra Finance. All rights reserved.</span>
+  <div className={styles.footerLinks}>
+    <a href="#">Terms of Service</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Cookies</a>
+  </div>
+</div>
+
+
           </div>
         </div>
 
@@ -115,21 +96,16 @@ export default function Footer() {
                 onChange={handleEmailChange}
                 required
               />
-              <button type="submit" className={styles.submitButton}>
-                <b>→</b>
-              </button>
-              
+              <button type="submit" className={styles.submitButton}><b>→</b></button>
             </form>
             {successMessage && <p className={styles.successMessage}>{successMessage}</p>}
           </div>
-
-          {/* New image container positioned at bottom right */}
           <div className={styles.footerImagesContainer}>
             <img src="/objects.png" alt="Image 1" className={styles.footerImage} />
             <img src="/guy2.png" alt="Image 2" className={styles.footerImage2} />
             <img src="/guy3.png" alt="Image 3" className={styles.footerImage3} />
-            
           </div>
+
         </div>
       </div>
     </footer>
