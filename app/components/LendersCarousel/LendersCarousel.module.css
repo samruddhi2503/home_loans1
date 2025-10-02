@@ -1,9 +1,12 @@
 /* components/LendersCarousel/LendersCarousel.module.css */
 .container {
-  max-width: 900px;
+  max-width: 2000px;
   margin: 0 auto 3rem;
   padding: 0 1rem;
   text-align: center;
+    height: 250px;
+    width: 1200px;
+    gap:2rem;
 }
 
 .heading {
@@ -13,16 +16,20 @@
   margin-bottom: 1.5rem;
 }
 
+
 /* Wrapper for the entire carousel row and arrows */
 .carouselWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
+    height: 220px;
+    width: 1200px;
+    gap:2rem;
 }
 
 /* Left and right arrow buttons */
 .arrowLeft, .arrowRight {
-  font-size: 2rem;
+  font-size: 2.5rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -48,23 +55,26 @@
 .logosRow {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;
   overflow: hidden;
-  width: 380px; /* Adjust width to fit 3 logos */
+ 
+  width: 160%;      /* take full available width */
+  max-width: 1500%; /* optional cap to avoid stretching too far */
+  margin: 0 auto;   
 }
 
 /* Logo container for each item */
 .logoWrapper {
-  width: 120px;
-  height: 60px;
+  width: 260px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 7px 9px rgba(18, 15, 15, 0.1);
   border-radius: 8px;
-  padding: 0.5rem;
+  padding: 0.1rem;
   transition: box-shadow 0.3s ease;
 }
 
@@ -74,7 +84,7 @@
 
 /* Style for the image itself */
 .logo {
-  max-width: 100%;
+  max-width: 200%;
   max-height: 100%;
   object-fit: contain;
 }
