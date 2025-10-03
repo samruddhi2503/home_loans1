@@ -35,14 +35,17 @@
 .button:hover {
   background-color: #581c87;
 }
+
+/* Floating calculator container */
 .calculatorFloating {
   position: relative;
-  width: 90%;
-  max-width: 850px;
-  margin: -80px auto 40px auto; /* Negative top margin to float overlapping hero and why choose us */
-  background-color: #fff;
+  width: 75.5rem;  /* 1208px */
+  height: 35.44rem; /* 567px */
+  margin: -80px auto 40px auto; /* Negative top margin to float upwards */
+  background-color: #fff; /* White background for visual card */
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   padding: 1.5rem;
-  z-index: 10;
+  z-index: 10; /* Float above hero */
 }
+
