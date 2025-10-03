@@ -104,7 +104,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  
+     padding-left: 5.5rem; 
 }
 
 .newsletter h3 {
@@ -239,14 +239,6 @@
   margin-top: 0.5rem;
 }
 
-.footerImagesContainer {
-  display: flex;
-  gap: 10px;
-  overflow: hidden;  
-  bottom: 10px;
-  right: 10px;
-
-}
 
 .footerImage {
   width: 322px; /* adjust size */
@@ -304,6 +296,8 @@
   bottom: 41px;            /* raises footer 80px upward */
   margin-left: -56%;          /* reset margins */
   margin-right: 70%;
+  position: relative; /* or fixed if you want sticky at bottom */
+  z-index: 1000; /* high enough to be above images */
 }
 
 
@@ -331,4 +325,30 @@
 
 .bottomFooter a:hover {
   text-decoration: underline;
+}
+
+
+.footerImagesContainer {
+  position: relative; /* important to anchor absolute children */
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+  align-items: flex-start; /* lift images up */
+  overflow:visible;
+  min-height: 310px;
+}
+
+
+
+.treeImage {
+  position: absolute;
+  bottom: auto;
+    right: -20.7rem; 
+ top: -10px;
+  width: 21.79rem;     /* adjust for your image */
+  height: 34.83rem;
+     transform: translateY(-328px);
+  object-fit: contain;
+  z-index: 10;
+  pointer-events: none; /* so it doesn't block other elements */
 }

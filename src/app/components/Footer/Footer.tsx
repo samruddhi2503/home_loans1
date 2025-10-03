@@ -45,7 +45,7 @@ export default function Footer() {
           <div className={styles.about}>
             <img src="/estra.png" alt="Estra Finance" className={styles.estra} />
             <img
-              src="/estrafinance.png" // replace with your 2nd image path
+              src="/estrafinance.png"
               alt="Second Logo"
               className={styles.estrafinance}
             />
@@ -71,17 +71,14 @@ export default function Footer() {
               <a href="#" onClick={handleLoginClick} className={styles.actionLink}>LOGIN</a>
               <span className={styles.separator}>|</span>
             </div>
-            {/* Bottom footer section moved here below Apply Now and Login */}
-      <div className={styles.bottomFooter}>
-  <span className={styles.copyrightText}>© 2025 Estra Finance. All rights reserved.</span>
-  <div className={styles.footerLinks}>
-    <a href="#">Terms of Service</a>
-    <a href="#">Privacy Policy</a>
-    <a href="#">Cookies</a>
-  </div>
-</div>
-
-
+            <div className={styles.bottomFooter}>
+              <span className={styles.copyrightText}>© 2025 Estra Finance. All rights reserved.</span>
+              <div className={styles.footerLinks}>
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookies</a>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -104,8 +101,8 @@ export default function Footer() {
             <img src="/objects.png" alt="Image 1" className={styles.footerImage} />
             <img src="/guy2.png" alt="Image 2" className={styles.footerImage2} />
             <img src="/guy3.png" alt="Image 3" className={styles.footerImage3} />
+            <img src="/tree.png" alt="Tree" className={styles.treeImage} />
           </div>
-
         </div>
       </div>
     </footer>
