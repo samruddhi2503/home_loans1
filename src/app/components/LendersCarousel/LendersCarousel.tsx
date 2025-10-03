@@ -4,10 +4,10 @@ import Image from 'next/image';
 import styles from './LendersCarousel.module.css';
 
 const lenders = [
-  { name: 'BPI', logo: '/bpi.png', width: 100, height: 50 },
-  { name: 'BDO', logo: '/bdo.png', width: 100, height: 50 },
-  { name: 'Chinabank', logo: '/chinabank.png', width: 650, height: 650 },
-  { name: 'Security Bank', logo: '/securitybank.png', width: 500, height: 500 },
+  { name: 'BPI', logo: '/bpi.png', width: 6.25 * 16, height: 3.125 * 16 },         // 100px → 6.25rem, 50px → 3.125rem
+  { name: 'BDO', logo: '/bdo.png', width: 6.25 * 16, height: 3.125 * 16 },         // 100px → 6.25rem, 50px → 3.125rem
+  { name: 'Chinabank', logo: '/chinabank.png', width: 40.625 * 16, height: 40.625 * 16 }, // 650px → 40.625rem
+  { name: 'Security Bank', logo: '/securitybank.png', width: 31.25 * 16, height: 31.25 * 16 }, // 500px → 31.25rem
 ];
 
 export default function LendersCarousel() {

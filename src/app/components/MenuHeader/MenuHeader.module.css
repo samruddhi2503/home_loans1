@@ -4,8 +4,8 @@
   background: #6b50a1;
   display: flex;
   align-items: center;
-  padding: 0 36px;
-  height: 64px;
+  padding: 0 2.25rem; /* 36px */
+  height: 4rem; /* 64px */
   position: sticky;
   top: 0;
   z-index: 100;
@@ -18,9 +18,9 @@
 }
 
 .logo {
-  width: 190px;
-  height: 35px;
-  margin-right: 16px;
+  width: 11.875rem; /* 190px */
+  height: 2.188rem; /* 35px */
+  margin-right: 1rem; /* 16px */
 }
 
 .title {
@@ -48,62 +48,55 @@
   display: flex;
   flex: 2;
   justify-content: center;
-  gap: 40px;
+  gap: 2.5rem; /* 40px */
 }
-
 
 .navSection a {
   color: white;
-
   font-size: 1rem;
   font-weight: 500;
   transition: color 0.2s;
-  padding: 2px 8px;
+  padding: 0.125rem 0.5rem; /* 2px 8px */
 }
 
 .navSection a:hover,
 .navSection a:focus {
-  text-decoration: underline; /* Optional: underline on hover/focus */
-  color: #fec932; /* Optional: highlight color on hover */
+  text-decoration: underline;
+  color: #fec932;
 }
-
 
 .active {
   color: #ffffff;
   font-weight: bold;
-  font-size:30;
-   text-decoration:none;
+  font-size: 1.875rem; /* 30px */
+  text-decoration: none;
 }
-
-
 
 .active1 {
   color: #ffffff;
   font-weight: bold;
-  font-size:30;
-   text-decoration:none;
+  font-size: 1.875rem; /* 30px */
+  text-decoration: none;
 }
-
 
 .active2 {
   color: #ffffff;
   font-weight: bold;
-  font-size:30;
-   text-decoration:none;
+  font-size: 1.875rem; /* 30px */
+  text-decoration: none;
 }
-
 
 .active3 {
   color: #ffffff;
   font-weight: bold;
-  font-size:30;
-   text-decoration:none;
+  font-size: 1.875rem; /* 30px */
+  text-decoration: none;
 }
 
 .rightSection {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem; /* 20px */
 }
 
 .notification {
@@ -113,34 +106,34 @@
 }
 
 .bellIcon {
-  width: 37px;
-  height: 38px;
+  width: 2.313rem; /* 37px */
+  height: 2.375rem; /* 38px */
   background: url('/bellicon.png') no-repeat center center;
   background-size: contain;
 }
 
 .divider {
-  border-left: 1px solid #f2f2f3;
-  height: 22px;
-  margin: 0 10px;
-   text-decoration:none;
+  border-left: 0.0625rem solid #f2f2f3; /* 1px */
+  height: 1.375rem; /* 22px */
+  margin: 0 0.625rem; /* 10px */
+  text-decoration: none;
 }
 
 .login {
-   text-decoration:none;
-   color: white;
+  text-decoration: none;
+  color: white;
 }
+
 .applyNow {
   color: #fff;
- 
   background: none;
   border: none;
   cursor: pointer;
-  
-  text-decoration:none;
+  text-decoration: none;
 }
+
 .imageWrapper {
   display: flex;
-  gap: 10px;
+  gap: 0.625rem; /* 10px */
   align-items: center;
 }

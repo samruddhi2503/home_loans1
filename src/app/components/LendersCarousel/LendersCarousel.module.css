@@ -1,12 +1,12 @@
 /* components/LendersCarousel/LendersCarousel.module.css */
 .container {
-  max-width: 2000px;
+  max-width: 125rem; /* 2000px */
   margin: 0 auto 3rem;
   padding: 0 1rem;
   text-align: center;
-    height: 250px;
-    width: 1200px;
-    gap:2rem;
+  height: 15.625rem; /* 250px */
+  width: 75rem; /* 1200px */
+  gap: 2rem;
 }
 
 .heading {
@@ -16,19 +16,19 @@
   margin-bottom: 1.5rem;
 }
 
-
 /* Wrapper for the entire carousel row and arrows */
 .carouselWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-    height: 220px;
-    width: 1200px;
-    gap:2rem;
+  height: 13.75rem; /* 220px */
+  width: 75rem; /* 1200px */
+  gap: 2rem;
 }
 
 /* Left and right arrow buttons */
-.arrowLeft, .arrowRight {
+.arrowLeft,
+.arrowRight {
   font-size: 2.5rem;
   background: none;
   border: none;
@@ -39,7 +39,8 @@
   transition: color 0.3s ease;
 }
 
-.arrowLeft:hover, .arrowRight:hover {
+.arrowLeft:hover,
+.arrowRight:hover {
   color: #0070f3;
 }
 
@@ -58,28 +59,28 @@
   gap: 2rem;
   justify-content: center;
   overflow: hidden;
- 
-  width: 160%;      /* take full available width */
-  max-width: 1500%; /* optional cap to avoid stretching too far */
-  margin: 0 auto;   
+
+  width: 160%;        /* take full available width */
+  max-width: 1500%;   /* optional cap to avoid stretching too far */
+  margin: 0 auto;
 }
 
 /* Logo container for each item */
 .logoWrapper {
-  width: 260px;
-  height: 80px;
+  width: 16.25rem; /* 260px */
+  height: 5rem; /* 80px */
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  box-shadow: 0 7px 9px rgba(18, 15, 15, 0.1);
-  border-radius: 8px;
+  box-shadow: 0 0.4375rem 0.5625rem rgba(18, 15, 15, 0.1); /* 0 7px 9px */
+  border-radius: 0.5rem; /* 8px */
   padding: 0.1rem;
   transition: box-shadow 0.3s ease;
 }
 
 .logoWrapper:hover {
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.375rem 0.625rem rgba(0, 0, 0, 0.15); /* 0 6px 10px */
 }
 
 /* Style for the image itself */
