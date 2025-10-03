@@ -15,15 +15,17 @@ export default function Home() {
 
   return (
     <>
-      <MenuHeader visible={showMenuHeader} />
-      <Header />
-      <Hero />
-      <div className={styles.calculatorFloating}>
-        <LoanCalculator />
-      </div>
-      <WhyChooseUs />
-      <LendersCarousel />
-      <Footer  />
-    </>
+  <MenuHeader visible={showMenuHeader} />
+<Header />
+<Hero />
+<div className={styles.calculatorFloating}>
+  <LoanCalculator />
+</div>
+<WhyChooseUs />
+
+  <LendersCarousel />
+  <Footer />
+</>
+
   );
 }
