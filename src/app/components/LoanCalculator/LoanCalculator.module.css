@@ -1,10 +1,10 @@
 .loanCalculator {
   background: white;
   padding: 1.5rem 1.5rem;
-  border-radius: 12px;
-  max-width: 1550px;
+  border-radius: 0.75rem; /* 12px */
+  max-width: 96.875rem; /* 1550px */
   margin: 0 auto 3rem;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  box-shadow: 0 0 0.75rem rgba(0,0,0,0.1); /* 12px blur */
 }
 
 .header {
@@ -20,8 +20,8 @@
   align-items: center;
   margin-bottom: 2rem;
   background: #fafafa;
-  border-radius: 10px;
-  border: 2px solid #ececec;
+  border-radius: 0.625rem; /* 10px */
+  border: 0.125rem solid #ececec; /* 2px */
   padding: 0.35rem 1rem;
   gap: 0.5rem;
   box-sizing: border-box;
@@ -30,7 +30,7 @@
 .currencySymbol {
   font-size: 2.5rem;
   font-weight: bold;
-    margin-left: 4rem;
+  margin-left: 4rem; /* stays rem */
 }
 
 .input {
@@ -50,13 +50,13 @@
 
 .savingsPanel {
   margin-top: 0.5rem;
-  border-radius: 12px;
+  border-radius: 0.75rem; /* 12px */
   overflow: hidden;
   display: flex;
   flex-direction: column;
-   width: 1027px;         /* set fixed width */
-  height: 186px; 
-   margin-left: 55px; 
+  width: 64.1875rem;  /* 1027px */
+  height: 11.625rem;  /* 186px */
+  margin-left: 3.4375rem; /* 55px */
 }
 
 .savingsHeader {
@@ -97,43 +97,41 @@
 .amount {
   font-size: 2.813rem;
   font-weight: 550;
-  letter-spacing: -1px;
+  letter-spacing: -0.0625rem; /* -1px */
   color: #fff;
-  
 }
 
 .savingsPanel p {
   margin: 0.1rem 0 0 0;
-font-size: 1.125rem;
+  font-size: 1.125rem;
   color: #fff;
 }
 
 .verticalDivider {
-  width: 0.085rem;             /* 1.2px to rem */
-  height: 7rem;                /* extended height from 75px (~4.6875rem) to 6rem for more length */
+  width: 0.075rem; /* ~1.2px */
+  height: 7rem; /* ~112px */
   background: white;
-  margin: -0.99rem 1.2rem -0.99rem 1.2rem;  /* -12px top/bottom margin converted to rem */
-  border-radius: 0.09475rem;   /* 1.5px to rem */
+  margin: -0.75rem 1.2rem -0.75rem 1.2rem; /* -12px → -0.75rem */
+  border-radius: 0.09375rem; /* 1.5px */
 }
-
 
 .applyButton {
   margin: 2rem auto 0 auto;
   display: block;
- width: 22.813rem;          /* 365px */
-  height: 3.875rem;  
+  width: 22.813rem; /* 365px */
+  height: 3.875rem; /* 62px */
   background: #6b21a8;
   color: #fff;
   border: none;
   outline: none;
-   margin-top: 3rem;
-  border-radius: 10px;
-  font-size:  1.875rem;
+  margin-top: 3rem;
+  border-radius: 0.625rem; /* 10px */
+  font-size: 1.875rem; /* 30px */
   font-weight: 600;
   padding: 0.95rem;
   transition: background 0.17s;
   cursor: pointer;
-  box-shadow: 0 3px 10px 0 #6b21a824;
+  box-shadow: 0 0.1875rem 0.625rem 0 #6b21a824; /* 3px 10px */
 }
 
 .applyButton:hover,
@@ -143,8 +141,7 @@ font-size: 1.125rem;
 
 .horizontalLine {
   width: 100%;
-  height: 0.03525rem;              /* line thickness */
-  background-color: white;     /* grey line color */
-   /* spacing: top 0.5rem, bottom 1rem */
-  border-radius: 0.5px;          /* optional rounded edges */
+  height: 0.03525rem; /* ~0.56px */
+  background-color: white;
+  border-radius: 0.03125rem; /* 0.5px */
 }

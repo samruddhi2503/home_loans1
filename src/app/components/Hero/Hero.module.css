@@ -5,11 +5,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 110px;
+  padding-bottom: 6.875rem; /* 110px */
 }
 
 .heroSection {
-  padding-bottom: 120px; /* room for overlapping calculator */
+  padding-bottom: 7.5rem; /* 120px */
 }
 
 .text {

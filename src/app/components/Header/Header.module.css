@@ -4,16 +4,15 @@
   padding: 1rem 2rem;
 }
 
-
 .stats {
   display: flex;
   justify-content: space-around;
   align-items: center;
-   font-size: 1.7rem;
+  font-size: 1.7rem;
   font-weight: 300;
 }
 
 .badge {
-  height: 120px;
-  width: 107px;
+  height: 7.5rem;  /* 120px */
+  width: 6.6875rem; /* 107px */
 }
