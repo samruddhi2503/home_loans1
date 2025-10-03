@@ -14,17 +14,6 @@
   border-radius: 12px;
   margin-top: 2rem;
 }
-.calculatorFloating {
-  background-color: #ded5d5ce; /* New background color */
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  padding: 1.5rem;
-  margin: -80px auto 40px;
-  max-width: 900px;
-  width: 90%;
-  position: relative;
-  z-index: 10;
-}
 
 .header {
   text-align: center;
