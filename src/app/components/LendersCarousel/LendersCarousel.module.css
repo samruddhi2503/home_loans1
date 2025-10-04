@@ -19,10 +19,10 @@
 /* Wrapper for the entire carousel row and arrows */
 .carouselWrapper {
   display: flex;
-  align-items: center;
+  transform: translateX(-2rem);
   justify-content: center;
   height: 13.75rem; /* 220px */
-  width: 75rem; /* 1200px */
+  width: 78rem; /* 1200px */
   gap: 2rem;
 }
 
@@ -73,7 +73,7 @@
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  box-shadow: 0 0.4375rem 0.5625rem rgba(18, 15, 15, 0.1); /* 0 7px 9px */
+  box-shadow: 0 0.4375rem 1.25rem rgba(18, 15, 15, 0.25);
   border-radius: 0.5rem; /* 8px */
   padding: 0.1rem;
   transition: box-shadow 0.3s ease;

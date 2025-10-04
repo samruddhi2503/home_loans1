@@ -65,20 +65,13 @@ export default function Footer() {
               </ul>
             </div>
             <div className={styles.actions}>
-              <span className={styles.separator}>|</span>
+              <span className={styles.separator}></span>
               <a href="#" onClick={handleApplyNowClick} className={styles.actionLink}>APPLY NOW</a>
-              <span className={styles.separator}>|</span>
+              <span className={styles.separator}></span>
               <a href="#" onClick={handleLoginClick} className={styles.actionLink}>LOGIN</a>
-              <span className={styles.separator}>|</span>
+              <span className={styles.separator}></span>
             </div>
-            <div className={styles.bottomFooter}>
-              <span className={styles.copyrightText}>© 2025 Estra Finance. All rights reserved.</span>
-              <div className={styles.footerLinks}>
-                <a href="#">Terms of Service</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Cookies</a>
-              </div>
-            </div>
+            
           </div>
         </div>
 
