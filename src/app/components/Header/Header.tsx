@@ -5,16 +5,16 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.stats}>
-        <div><strong><b>7,000,000</b></strong><br />In potential savings</div>
-        <span className={styles.separator}>|</span>
+        <div><b>7,000,000</b><br />In potential savings</div>
+        <span className={styles.separator}></span>
         <div><img src="/badge.png" alt="Platform Logo" className={styles.badge} /></div>
-        <span className={styles.separator}>|</span>
+        <span className={styles.separator}></span>
         <div>
-          <strong><b>15 Minutes</b></strong><br />To apply online
+          <b>15 Minutes</b><br />To apply online
         </div>
-         <span className={styles.separator}>|</span>
+         <span className={styles.separator}></span>
         <div>
-          <strong><b>Best Banks</b></strong><br />In The Philippines
+          <b>Best Banks</b><br />In The Philippines
         </div>
       </div>
                   </header>

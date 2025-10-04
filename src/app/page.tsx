@@ -5,6 +5,7 @@ import LoanCalculator from './components/LoanCalculator/LoanCalculator';
 import WhyChooseUs from './components/WhyChooseUs/WhyChooseUs';
 import LendersCarousel from './components/LendersCarousel/LendersCarousel';
 import Footer from './components/Footer/Footer';
+import BottomFooter from './components/BottomFooter/BottomFooter';
 import styles from './page.module.css';
 
 const isLoggedIn = false; // Use auth context/hook here
@@ -25,6 +26,7 @@ export default function Home() {
 
   <LendersCarousel />
   <Footer />
+  <BottomFooter />
 </>
 
   );

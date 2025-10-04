@@ -7,7 +7,7 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={styles.text}>
         <p className={styles.smallTxt}>SAVE BIG WITH THE</p>
-        <h1 className={styles.title}>Perfect Home Loan Made Just For You</h1>
+        <h1 className={styles.title}>Perfect Home Loan <br></br>Made Just For You</h1>
         <p className={styles.subtitle}>Don't Overpay On Your Home Loan!</p>
       </div>
       <div className={styles.imageWrapper}>
