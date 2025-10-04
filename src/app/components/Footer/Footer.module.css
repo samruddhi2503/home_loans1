@@ -22,15 +22,19 @@
   margin: 0 auto;
   
 }
-
 .leftSection {
-  flex: 2;  /* takes more space */
-  padding-right: 2rem;
-  border-right: 0.125rem solid #6b7280; /* vertical grey line */
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  position: relative;
 }
+.leftSection::after {
+  content: '';
+  position: absolute;
+  top: -3rem;           /* raise the start of the line above the container */
+  right: 0;
+  width: 0.1rem;      /* thickness */
+  height: 40rem;        /* total line height */
+  background: #6b7280;
+}
+
 
 .rightSection {
   
@@ -143,10 +147,9 @@
 }
 .horizontalLine {
   width: 245%;
-  height: 0.125rem;
+  height: 0.1rem;
   background-color: #616973;  
   margin: 0.5rem 0 1rem ;
-    
      transform: translate( -35%, 1.25rem);
   border: none;
 }
