@@ -1,18 +1,31 @@
 .header {
   background: linear-gradient(90deg, #4b0082, #6b21a8);
   color: white;
-  padding: 1rem 2rem;
+  padding: 0rem 3rem;
+  width:90rem;
+  height:134px;
+ 
 }
 
 .stats {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: 1.7rem;
-  font-weight: 300;
+  font-size: 1.6rem;
+   transform : translateY(1rem);
+  
 }
 
 .badge {
-  height: 7.5rem;  /* 120px */
-  width: 6.6875rem; /* 107px */
+  height: 5.5rem;  
+  width: 6.3rem; 
+   transform : translateY(0.5rem);
+}
+.separator {
+  width: 0.08rem;
+  height: 4.5rem;
+  background-color: white;
+  display: inline-block;
+  margin: 0 1rem; /* add horizontal space */
+  vertical-align: middle;
 }

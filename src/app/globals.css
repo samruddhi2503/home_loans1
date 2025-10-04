@@ -4,3 +4,7 @@ body {
   background-color: #fff;
   color: #333;
 }
+html, body {
+  overflow-x: hidden;
+  padding: 0;
+}
