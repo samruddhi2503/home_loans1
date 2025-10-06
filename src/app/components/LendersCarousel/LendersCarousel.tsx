@@ -4,16 +4,16 @@ import Image from 'next/image';
 import styles from './LendersCarousel.module.css';
 
 const lenders = [
-  { name: 'BPI', logo: '/bpi.png', width: 6.25 * 16, height: 3.125 * 16 },         // 100px → 6.25rem, 50px → 3.125rem
-  { name: 'BDO', logo: '/bdo.png', width: 6.25 * 16, height: 3.125 * 16 },         // 100px → 6.25rem, 50px → 3.125rem
-  { name: 'Chinabank', logo: '/chinabank.png', width: 40.625 * 16, height: 40.625 * 16 }, // 650px → 40.625rem
-  { name: 'Security Bank', logo: '/securitybank.png', width: 31.25 * 16, height: 31.25 * 16 }, // 500px → 31.25rem
+  { name: 'BPI', logo: '/bpi.png' },
+  { name: 'BDO', logo: '/bdo.png' },
+  { name: 'Chinabank', logo: '/chinabank.png' },
+  { name: 'Security Bank', logo: '/securitybank.png' },
 ];
 
 export default function LendersCarousel() {
   const [startIndex, setStartIndex] = useState(0);
   const visibleCount = 4; // number of logos visible at once
-  const lendersCount = lenders.length;
+  const lendersCount = lenders.length; 
 
   const prev = () => {
     // Move startIndex left, wrap around
@@ -39,14 +39,14 @@ export default function LendersCarousel() {
           &#8249;
         </button>
         <div className={styles.logosRow}>
-          {visibleLenders.map(({ name, logo, width, height }) => (
+          {visibleLenders.map(({ name, logo }) => (
             <div key={name} className={styles.logoWrapper}>
               <Image
                 src={logo}
                 alt={`${name} logo`}
-                width={width}
-                height={height}
+                fill
                 className={styles.logo}
+                sizes="(max-width: 768px) 25vw, (max-width: 1024px) 20vw, 15vw"
               />
             </div>
           ))}

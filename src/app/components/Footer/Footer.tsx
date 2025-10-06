@@ -39,7 +39,6 @@ export default function Footer() {
   };
 
   return (
-    <div className="footerWrapper">
     <footer className={styles.footer}>
       <div className={styles.footerContentWrapper}>
         <div className={styles.leftSection}>
@@ -100,6 +99,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-    </div>
   );
 }

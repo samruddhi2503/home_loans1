@@ -1,67 +1,73 @@
 .footer {
-  /* Prevent overflow on smaller screens */
-  margin: 0 auto; /* Center horizontally */
-  background-color: #1f2937; /* existing background */
+  width: 100vw;
+  min-height: auto;   /* let content define height */
+  background-color: #1f2937;
   color: white;
-  padding: 0rem 3rem;
+  padding: 2rem 1rem; /* adjust top/bottom padding */
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  position:relative;
-   width: 90rem;
-  font-size: 0.875rem;
-   height: 32.75rem;
- overflow:hidden;
+  flex-direction: column;
+  position: relative;
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
+  overflow-x: hidden;
+  box-sizing: border-box;
+  
 }
 
 
 .footerContentWrapper {
   display: flex;
- 
-  max-width: 90rem; /* max width container */
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
-  
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 .leftSection {
+  flex: 1;
+  min-width: 300px;
+  max-width: 50%;
   position: relative;
+  padding: 0.75rem;
 }
+
 .leftSection::after {
   content: '';
   position: absolute;
-  top: -3rem;           /* raise the start of the line above the container */
-  right: -12rem;
-  width: 0.1rem;      /* thickness */
-  height: 40rem;        /* total line height */
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
   background: #6b7280;
+  display: none; /* Hide on mobile, show on larger screens */
+}
+
+@media (min-width: 768px) {
+  .leftSection::after {
+    display: block;
+  }
 }
 
 
-.rightSection {
-  
-  flex: 1;  /* takes remaining */
-  padding-left: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-/* Left and right sections take equal space */
-
-.leftSection,
 .rightSection {
   flex: 1;
+  min-width: 300px;
+  max-width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding: 1rem;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  position: relative;
 }
 /* Rest of your styles remain as is */
 
 .about {
-  max-width: 18.75rem;
+  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .about h3 {
@@ -106,18 +112,17 @@
 
 .newsletter {
   flex: 1;
-  min-width: 13.75rem;
+  min-width: 200px;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-     padding-left: 16.5rem; 
+  gap: 0.75rem;
+  padding: 0.5rem 0;
 }
 
 .newsletter h3 {
   font-weight: 500;
-    font-size: 2.188rem;
-     transform: translateY(-0.3cm); 
-    
+  font-size: clamp(1.5rem, 4vw, 2.188rem);
+  margin-bottom: 0.5rem;
 }
 .emailInputWrapper {
   display: flex;
@@ -125,19 +130,17 @@
   gap: 0rem; /* space between input and button */
 }
 .newsletter input {
-  width: 22.25rem; /* Set the desired fixed width */
-  padding: 1rem 0.75rem;
+  flex: 1;
+  min-width: 200px;
+  padding: clamp(0.8rem, 2vw, 1rem) clamp(0.6rem, 1.5vw, 0.75rem);
   border: none;
   border-radius: 0.5rem;
- 
-   transform: translateY(-1.2cm); 
   font-weight: 700;
-    font-size: 1rem;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
 
 .submitButton {
-   transform: translateY(-1.2cm); 
-  padding: 1rem 0.75rem;
+  padding: clamp(0.8rem, 2vw, 1rem) clamp(0.6rem, 1.5vw, 0.75rem);
   border-radius: 0.5rem;
   background-color: #6b21a8;
   color: white;
@@ -145,14 +148,13 @@
   cursor: pointer;
   font-weight: 1000;
   white-space: nowrap;
-     margin-right: auto; 
+  min-width: 60px;
 }
 .horizontalLine {
-  width: 259.7%;
-  height: 0.1rem;
-  background-color: #616973;  
-  margin: 0.5rem 0 1rem ;
- transform: translate( -35%, 1.25rem);
+  width: 100%;
+  height: 1px;
+  background-color: #616973;
+  margin: 0.5rem 0 1rem;
   border: none;
 }
 
@@ -172,19 +174,18 @@
 }
 
 .subHeading {
-  
   color: #edeef1;
-  font-size: 1.475rem;
+  font-size: clamp(1rem, 2.5vw, 1.475rem);
   font-weight: 520;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
-  transform: translate(-7rem,1.25rem);
 }
 
 .linkColumns {
   display: flex;
-  gap: 9rem;
-  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 5vw, 6rem);
+  margin-bottom: 1rem;
 }
 
 .leftLinks,
@@ -192,8 +193,9 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size:1rem;
-   transform: translateX(-7rem);
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  flex: 1;
+  min-width: 120px;
 }
 
 .leftLinks li,
@@ -218,23 +220,23 @@
 .actions {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
-  font-weight:normal;
-  font-size:0.938rem;
-  overflow:visible;
+  flex-wrap: wrap;
+  gap: clamp(0.5rem, 2vw, 0.7rem);
+  font-weight: normal;
+  font-size: clamp(0.8rem, 1.5vw, 0.938rem);
+  overflow: visible;
 }
 
 
 .actionLink {
   color: white;
-    font-weight: 400 !important;
+  font-weight: 400 !important;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: clamp(0.4rem, 1vw, 0.5rem) clamp(0.8rem, 2vw, 1rem);
   cursor: pointer;
   border-radius: 8px;
   transition: background-color 0.3s ease;
- 
-     transform: translate(-8rem,-1rem); 
+  white-space: nowrap;
 }
 
 .successMessage {
@@ -243,50 +245,48 @@
 }
 
 .separator {
-  width: 0.08rem;
-  height: 2.5rem;
+  width: 1px;
+  height: clamp(1.5rem, 4vw, 2.5rem);
   background-color: white;
   display: inline-block;
-  margin: 0 1rem; /* add horizontal space */
+  margin: 0 clamp(0.5rem, 2vw, 1rem);
   vertical-align: middle;
-     transform: translate(-8rem,-1rem); 
 }
 
 .footerImage {
-  width: 322px; /* adjust size */
-  height: 385.41px;
+  width: clamp(100px, 18vw, 200px);
+  height: clamp(120px, 22vw, 240px);
   object-fit: contain;
-    z-index: 1;
-   transform: translate(25rem, 1.875rem); 
+  z-index: 1;
+  flex-shrink: 0;
 }
 
 .footerImage2 {
-  width: 160px; /* adjust size */
-  height:375px;
+  width: clamp(60px, 12vw, 120px);
+  height: clamp(140px, 18vw, 200px);
   object-fit: contain;
- transform: translate(11.7rem, 0.375rem); 
+  flex-shrink: 0;
 }
+
 .footerImage3 {
-  width: 10.752rem; /* adjust size */
-  height:29.378rem;
+  width: clamp(70px, 12vw, 120px);
+  height: clamp(140px, 18vw, 200px);
   object-fit: contain;
-     transform: translate(11.5rem, -5.89rem); /* X (right), Y (up) */
+  flex-shrink: 0;
 }
 
 .estra {
-  width: 2.563rem; 
-  height:3.313rem; /* adjust size */
-  margin-bottom: 1rem;  /* spacing below image */
+  width: clamp(2rem, 4vw, 2.563rem);
+  height: clamp(2.5rem, 5vw, 3.313rem);
+  margin-bottom: 1rem;
   display: block;
-   transform: translate(-7rem,3.3rem);
 }
 
 .estrafinance {
-  width: 12.375rem;   /* 198px */
-  height: 2.125rem;   /* 34px */
-  margin-bottom: 1rem;  /* already in rem */
+  width: clamp(8rem, 20vw, 12.375rem);
+  height: clamp(1.5rem, 3vw, 2.125rem);
+  margin-bottom: 1rem;
   display: block;
-  transform: translate(-4rem, -2.5rem); 
 }
 
 
@@ -316,64 +316,84 @@
   text-decoration: underline;
 }
 
-
 .footerImagesContainer {
-  position: relative; /* important to anchor absolute children */
+  position: relative;
   display: flex;
-  gap: 0.625rem;
-  overflow: hidden;
-  align-items: flex-start; /* lift images up */
-  overflow:visible;
-  min-height: 19.375rem;
+  flex-wrap: wrap;
+  gap: clamp(0.3rem, 1vw, 0.5rem);
+  align-items: flex-start;
+  justify-content: center;
+  min-height: auto;        /* remove fixed min-height */
+  max-height: 25vh;        /* optional limit for very large screens */
+  overflow: visible;
+  margin-top: 1rem;
 }
-
 
 
 .treeImage {
   position: absolute;
-  bottom: auto;
-    right: -26.7rem; 
- top: -0.625rem;
-  width: 21.79rem;     /* adjust for your image */
-  height: 34.83rem;
-     transform: translateY(-20.5rem);
+  bottom: 0;
+  right: clamp(-6rem, -12vw, -3rem);
+  top: auto;
+  width: clamp(5rem, 15vw, 12rem);
+  height: clamp(8rem, 20vw, 18rem);
   object-fit: contain;
   z-index: 10;
-  pointer-events: none; /* so it doesn't block other elements */
+  pointer-events: none;
+  opacity: 0.7;
 }
 
 
 /* ================== Responsive ================== */
 @media (max-width: 1024px) {
+  .footer {
+    min-height: auto;
+    padding: 1.5rem 1rem;
+  }
+  
   .footerContentWrapper {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
+  }
+
+  .leftSection,
+  .rightSection {
+    max-width: 100%;
+    min-width: auto;
   }
 
   .leftSection::after {
-    display: none; /* remove vertical divider on smaller screens */
+    display: none;
+  }
+
+  .footerImagesContainer {
+    justify-content: center;
   }
 }
 
 @media (max-width: 768px) {
+  .footer {
+    padding: 1rem 0.5rem;
+  }
+
+  .linkColumns {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
   .actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .emailInputWrapper {
     flex-direction: column;
     gap: 0.5rem;
   }
 
   .newsletter input {
-    font-size: 0.9rem;
-  }
-
-  .newsletter h3 {
-    font-size: clamp(1.25rem, 2.2vw, 1.8rem);
-  }
-}
-
-@media (max-width: 480px) {
-  .nav {
-    flex-direction: column;
-    gap: 0.5rem;
+    width: 100%;
   }
 
   .footerImagesContainer {
@@ -382,10 +402,46 @@
     gap: 1rem;
   }
 
-  .applyNow,
-  .login,
-  .submitButton {
+  .treeImage {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1rem 0.25rem;
+  }
+
+  .leftSection,
+  .rightSection {
+    padding: 0.5rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .actionLink {
     width: 100%;
     text-align: center;
+    padding: 0.75rem;
+  }
+
+  .submitButton {
+    width: 100%;
+  }
+
+  .footerImagesContainer {
+    min-height: auto;
+  }
+
+  .footerImage,
+  .footerImage2,
+  .footerImage3 {
+    max-width: 80%;
   }
 }
