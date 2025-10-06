@@ -1,20 +1,34 @@
 .menuHeader {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  background: #6b50a1;
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   padding: 0 3vw;
-  height: 4rem;
-  min-height: 56px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  background: #6b50a1;
   box-sizing: border-box;
-  font-size: clamp(1rem, 1.2vw, 1.4rem);
+  z-index: 100;
+  height: 4rem;
 }
+
+.logoSection {
+  flex: 0 0 auto;  /* logo takes only needed space */
+}
+
+.rightSection {
+  flex: 0 0 auto;  /* right icons/buttons take only needed space */
+}
+
+.navSection {
+  position: absolute;   /* absolute center */
+  left: 50%;
+  transform: translateX(-50%);  /* center horizontally */
+  display: flex;
+  gap: clamp(1rem, 2vw, 2.5rem);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 
 .logoSection {
   display: flex;
@@ -24,9 +38,15 @@
 }
 
 .logo,
-.logo2 {
+{
   width: 40px; /* make both logos same size */
   height: auto;
+  margin-right: 0.5rem;
+  flex-shrink: 1;
+}
+.logo2 {
+  width: clamp(105px, 6vw, 130px); /* min 50px, preferred 6vw, max 80px */
+  height: 35px;
   margin-right: 0.5rem;
   flex-shrink: 1;
 }
@@ -42,7 +62,9 @@
   display: flex;
   flex: 2 1 auto;
   justify-content: center;
-  gap: 2rem;
+   gap: clamp(1rem, 2vw, 2.5rem);
+    position: absolute;   /* absolute center */
+ transform: translateX(-50%); 
   min-width: 0;
   align-items: center;
   flex-wrap: nowrap;
@@ -50,15 +72,16 @@
 }
 
 .navSection a {
-  color: white;
-  font-size: clamp(0.8rem, 1.5vw, 1.2rem);
-  font-weight: 500;
   white-space: nowrap;
+  font-size: clamp(0.5rem, 1.5vw, 1.2rem);
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
   flex-shrink: 1;
   overflow: hidden;
-   text-decoration: none; 
   text-overflow: ellipsis;
 }
+
 
 .navSection a:hover,
 .navSection a:focus {
@@ -81,7 +104,7 @@
   display: flex;
   align-items: center;
   gap: clamp(4px, 1vw, 16px);
-  flex: 0 1 auto;
+  flex: 0 0 auto;
   min-width: 0;
 }
 

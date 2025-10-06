@@ -14,7 +14,7 @@ const MenuHeader: React.FC<MenuHeaderProps> = ({ visible }) => {
       <div className={styles.logoSection}>
         <div className={styles.imageWrapper}>
           <Image src="/estra.png" alt="Logo 1" width={40} height={35} />
-          <Image src="/estrafinance.png" alt="Logo 2" width={40} height={35} className={styles.logo2} />
+          <Image src="/estrafinance.png" alt="Logo 2" width={130} height={165} className={styles.logo2} />
         </div>
       </div>
       <nav className={styles.navSection}>
