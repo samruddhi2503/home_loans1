@@ -1,21 +1,18 @@
+/* ================== Loan Calculator ================== */
 .loanCalculator {
-  background:white;
-  padding: 1.5rem 1.5rem;
+  background: white;
+  padding: 1.5rem;
   border-radius: 0.75rem; /* 12px */
-  max-width: 75.5rem; /* 1550px */
-  margin: 0 auto 3rem;
-  height:35.75rem;
-  
-  /* Broader box shadow */
+  max-width: 75.5rem; /* 1208px */
+  margin: -7.09rem auto 3rem;
+  height: 35.75rem;
   box-shadow: 0 4px 30px 8px rgba(0, 0, 0, 0.15);
-
-   margin-top: -7.09rem;
- /* 12px blur */
+  box-sizing: border-box;
 }
 
 .header {
   text-align: center;
-  font-size: 2.188rem;
+  font-size: clamp(1.5rem, 3vw, 2.188rem);
   margin-bottom: 1rem;
   font-weight: 550;
   margin-top: -1rem;
@@ -25,34 +22,32 @@
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
-  width:82%;
+  width: 82%;
   transform: translateX(5.5rem);
   background: #e6e4e4;
   border-radius: 0.625rem; /* 10px */
-  border: 0.125rem solid #ececec; /* 2px */
+  border: 0.16rem solid #e4dede;
   padding: 0.35rem 1rem;
   gap: 0.5rem;
-  border: 0.16rem solid #e4dede;
+  box-sizing: border-box;
 }
 
 .currencySymbol {
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: bold;
-  margin-left: 4rem; /* stays rem */
+  margin-left: 4rem;
 }
 
 .input {
   flex: 1;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   border: none;
   outline: none;
   background: transparent;
   font-weight: 700;
   max-width: calc(100% - 2rem);
-  margin: 7 1rem;
-  padding: 0.4rem 0;
-  color:black;
-   padding: 0 5rem;
+  padding: 0 5rem;
+  color: black;
 }
 
 .input:focus {
@@ -61,10 +56,9 @@
 
 .savingsPanel {
   margin-top: 0.5rem;
-  border-radius: 0.75rem; /* 12px */
+  border-radius: 0.75rem;
   overflow: hidden;
   display: flex;
-  transform: translateX(2rem);
   flex-direction: column;
   width: 64.1875rem;  /* 1027px */
   height: 11.625rem;  /* 186px */
@@ -75,13 +69,10 @@
   width: 100%;
   text-align: center;
   color: #ffffff;
-  width:64.18rem;
-  height:11.62ren;
   font-weight: 500;
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
   background: linear-gradient(90deg, #fbbf24 0%, #f59e0b 100%);
   padding: 0.85rem 0 0.3rem 0;
-  
 }
 
 .savingsBottomRow {
@@ -93,6 +84,7 @@
   justify-content: space-between;
   padding: 1.3rem 1.1rem 1.2rem 1.1rem;
   gap: 0.7rem;
+  flex-wrap: wrap;
 }
 
 .savingsItem {
@@ -104,21 +96,21 @@
 }
 
 .icon {
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 3vw, 2rem);
   font-weight: bold;
   line-height: 1;
 }
 
 .amount {
-  font-size: 2.813rem;
+  font-size: clamp(1.5rem, 3.5vw, 2.813rem);
   font-weight: 550;
-  letter-spacing: -0.0625rem; /* -1px */
+  letter-spacing: -0.0625rem;
   color: #fff;
 }
 
 .savingsPanel p {
   margin: 0.1rem 0 0 0;
-  font-size: 1.125rem;
+  font-size: clamp(0.8rem, 2vw, 1.125rem);
   color: #fff;
 }
 
@@ -126,27 +118,26 @@
   width: 0.075rem; /* ~1.2px */
   height: 7rem; /* ~112px */
   background: white;
-  margin: -0.75rem 1.2rem -0.75rem 1.2rem; /* -12px → -0.75rem */
+  margin: -0.75rem 1.2rem -0.75rem 1.2rem;
   border-radius: 0.09375rem; /* 1.5px */
 }
 
 .applyButton {
-  margin: 2rem auto 0 auto;
   display: block;
-  width: 22.813rem; /* 365px */
-  height: 3.875rem; /* 62px */
+  width: clamp(12rem, 25vw, 22.813rem); /* scale button width */
+  height: clamp(2.5rem, 6vw, 3.875rem); /* scale button height */
+  margin: 5rem auto 0 auto;
   background: #6b21a8;
   color: #fff;
   border: none;
   outline: none;
-  margin-top:5rem;
-  border-radius: 0.625rem; /* 10px */
-  font-size: 1.875rem; /* 30px */
+  border-radius: 0.625rem;
+  font-size: clamp(1rem, 3vw, 1.875rem);
   font-weight: 600;
   padding: 0.95rem;
   transition: background 0.17s;
   cursor: pointer;
-  box-shadow: 0 0.1875rem 0.625rem 0 #deb77424; /* 3px 10px */
+  box-shadow: 0 0.1875rem 0.625rem 0 #deb77424;
 }
 
 .applyButton:hover,
@@ -156,7 +147,8 @@
 
 .horizontalLine {
   width: 100%;
-  height: 0.03525rem; /* ~0.56px */
+  height: 0.03525rem; 
   background-color: white;
-  border-radius: 0.03125rem; /* 0.5px */
+  border-radius: 0.03125rem;
 }
+
