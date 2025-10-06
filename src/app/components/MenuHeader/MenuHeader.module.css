@@ -1,62 +1,63 @@
-/* components/MenuHeader.module.css */
 .menuHeader {
-  width: 90rem;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
   background: #6b50a1;
   display: flex;
   align-items: center;
-  padding: 0 3rem; /* 36px */
-  height: 4rem; /* 64px */
+  justify-content: space-between;
+  padding: 0 3vw;
+  height: 4rem;
+  min-height: 56px;
   position: sticky;
   top: 0;
   z-index: 100;
+  box-sizing: border-box;
+  font-size: clamp(1rem, 1.2vw, 1.4rem);
 }
 
 .logoSection {
   display: flex;
   align-items: center;
-  flex: 1;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
-.logo {
-  width: 1.875rem; /* 190px */
-  height: 1.188rem; /* 35px */
-  margin-right: 1rem; /* 16px */
+.logo,
+.logo2 {
+  width: 40px; /* make both logos same size */
+  height: auto;
+  margin-right: 0.5rem;
+  flex-shrink: 1;
 }
 
-.title {
-  font-size: 1.6rem;
-  color: white;
-  font-weight: 500;
-}
-
-.bold {
-  font-weight: bold;
-  color: white;
-}
-
-.yellow {
-  color: #fec932;
-  font-weight: bold;
-}
-
-.subtitle {
-  font-size: 0.9rem;
-  color: #e3dae3;
+.imageWrapper {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .navSection {
   display: flex;
-  flex: 2;
+  flex: 2 1 auto;
   justify-content: center;
-  gap: 2.5rem; /* 40px */
+  gap: 2rem;
+  min-width: 0;
+  align-items: center;
+  flex-wrap: nowrap;
+   text-decoration: none; 
 }
 
 .navSection a {
   color: white;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 1.5vw, 1.2rem);
   font-weight: 500;
-  transition: color 0.2s;
-  padding: 0.125rem 0.5rem; /* 2px 8px */
+  white-space: nowrap;
+  flex-shrink: 1;
+  overflow: hidden;
+   text-decoration: none; 
+  text-overflow: ellipsis;
 }
 
 .navSection a:hover,
@@ -71,51 +72,112 @@
 .active3 {
   color: #ffffff;
   font-weight: bold;
-  font-size: 1.875rem; /* 30px */
-  text-decoration: none;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  flex-shrink: 1;
+   text-decoration: none; 
 }
 
 .rightSection {
   display: flex;
   align-items: center;
-  gap: 1.25rem; /* 20px */
-}
-
-.notification {
-  position: relative;
-  display: flex;
-  align-items: center;
+  gap: clamp(4px, 1vw, 16px);
+  flex: 0 1 auto;
+  min-width: 0;
 }
 
 .bellIcon {
-  width: 2.313rem; /* 37px */
-  height: 2.375rem; /* 38px */
+  width: clamp(25px, 4vw, 38px);
+  height: auto;
+  flex-shrink: 1;
   background: url('/bellicon.png') no-repeat center center;
   background-size: contain;
 }
 
-.divider {
-  border-left: 0.0625rem solid #f2f2f3; /* 1px */
-  height: 1.375rem; /* 22px */
-  margin: 0 0.625rem; /* 10px */
-  text-decoration: none;
-}
-
+.applyNow,
 .login {
-  text-decoration: none;
+  font-size: clamp(0.55rem, 1.5vw, 1rem);
+  padding: clamp(2px, 0.5vw, 6px) clamp(4px, 1vw, 12px);
+  flex-shrink: 1;
   color: white;
+  white-space: nowrap;
+   text-decoration: none; 
 }
 
-.applyNow {
-  color: #fff;
-  background: none;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
+.divider {
+  width: 1px;
+  height: clamp(12px, 2vw, 22px);
+  margin: 0 clamp(4px, 1vw, 10px);
+  background-color: white;
+  flex-shrink: 1;
 }
 
-.imageWrapper {
-  display: flex;
-  gap: 0.625rem; /* 10px */
-  align-items: center;
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .menuHeader {
+    padding: 0 1vw;
+    height: 3.2rem;
+  }
+  .logoSection,
+  .navSection,
+  .rightSection {
+    gap: 0.5rem;
+  }
+  .bellIcon {
+    width: clamp(20px, 3vw, 25px);
+    height: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .menuHeader {
+    flex-direction: row;
+    height: auto;
+    padding: 0.5rem;
+  }
+  .navSection {
+    justify-content: center;
+    gap: 0.7rem;
+    flex-wrap: nowrap;
+  }
+  .rightSection {
+    justify-content: center;
+    gap: 0.7rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .menuHeader {
+    padding: 0.3rem 0.5rem;
+  }
+  .logoSection {
+    margin-right: 0.3rem;
+  }
+  .navSection a {
+    font-size: clamp(0.5rem, 2.5vw, 0.8rem);
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+  .rightSection {
+    gap: 0.3rem;
+  }
+  .logo,
+  .logo2 {
+    width: clamp(30px, 6vw, 40px);
+    height: auto;
+  }
+  .bellIcon {
+    width: clamp(15px, 6vw, 25px);
+  }
+  .applyNow,
+  .login {
+    font-size: clamp(0.5rem, 2.5vw, 0.8rem);
+    padding: 2px 6px;
+    color: white;
+  }
+  .divider {
+    height: clamp(8px, 2vw, 12px);
+    margin: 0 2px;
+    background-color: white;
+  }
 }
