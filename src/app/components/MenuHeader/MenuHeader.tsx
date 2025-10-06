@@ -12,10 +12,9 @@ const MenuHeader: React.FC<MenuHeaderProps> = ({ visible }) => {
   return (
     <header className={styles.menuHeader}>
       <div className={styles.logoSection}>
-        {/* Two images side by side */}
         <div className={styles.imageWrapper}>
           <Image src="/estra.png" alt="Logo 1" width={40} height={35} />
-          <Image src="/estrafinance.png" alt="Logo 2" width={190} height={35} />
+          <Image src="/estrafinance.png" alt="Logo 2" width={40} height={35} className={styles.logo2} />
         </div>
       </div>
       <nav className={styles.navSection}>
@@ -27,7 +26,6 @@ const MenuHeader: React.FC<MenuHeaderProps> = ({ visible }) => {
       <div className={styles.rightSection}>
         <div className={styles.notification}>
           <span className={styles.bellIcon} />
-     
         </div>
         <span className={styles.divider} />
         <a href="/apply" className={styles.applyNow}>APPLY NOW</a>

@@ -1,31 +1,50 @@
 .header {
   background: linear-gradient(90deg, #4b0082, #6b21a8);
   color: white;
-  padding: 0rem 3rem;
-  width:90rem;
-  height:134px;
- 
+  padding: 0 3%;
+  width: 100%;      /* full width of viewport */
+  max-width: 100; /* limits max width on large screens */
+  height: auto;
+  min-height: 134px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap; /* stay horizontal */
 }
 
 .stats {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: 1.6rem;
-   transform : translateY(1rem);
-  
+  width: 100%;
+  gap: 2%;          /* use relative gap */
+  font-size: clamp(1rem, 1.6vw, 1.6rem); /* scales font on smaller screens */
 }
 
 .badge {
-  height: 5.5rem;  
-  width: 6.3rem; 
-   transform : translateY(0.5rem);
+  height: clamp(2.5rem, 4vw, 5.5rem);
+  width: clamp(3rem, 4.5vw, 6.3rem);
 }
+
 .separator {
   width: 0.08rem;
-  height: 4.5rem;
+  height: clamp(2rem, 3vw, 4.5rem);
   background-color: white;
-  display: inline-block;
-  margin: 0 1rem; /* add horizontal space */
-  vertical-align: middle;
+  margin: 0 0.5rem;
+}
+
+/* ================== Media Queries ================== */
+@media (max-width: 1024px) {
+  .stats { gap: 1.5%; }
+}
+
+@media (max-width: 768px) {
+  .stats { gap: 1%; }
+}
+
+@media (max-width: 480px) {
+  .stats { gap: 0.5%; font-size: 1rem; }
+  .badge { height: 3rem; width: 3.5rem; }
+  .separator { height: 2.5rem; }
 }

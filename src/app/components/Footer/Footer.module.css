@@ -341,3 +341,51 @@
   z-index: 10;
   pointer-events: none; /* so it doesn't block other elements */
 }
+
+
+/* ================== Responsive ================== */
+@media (max-width: 1024px) {
+  .footerContentWrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .leftSection::after {
+    display: none; /* remove vertical divider on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .newsletter input {
+    font-size: 0.9rem;
+  }
+
+  .newsletter h3 {
+    font-size: clamp(1.25rem, 2.2vw, 1.8rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footerImagesContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .applyNow,
+  .login,
+  .submitButton {
+    width: 100%;
+    text-align: center;
+  }
+}
